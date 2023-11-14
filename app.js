@@ -170,23 +170,23 @@ app.get("/combined-response", async (req, res) => {
   const { month = "", s_query = "", limit = 10, offset = 0 } = req.query;
 
   const initializeResponse = await axios.get(
-    `https://roxiler-systems-assignment-lw5d.onrender.com/initialize-database`
+    `https://roxilersystems-assignment.onrender.com/initialize-database`
   );
   const initializeResponseData = await initializeResponse.data;
   const listTransactionsResponse = await axios.get(
-    `https://roxiler-systems-assignment-lw5d.onrender.com/transactions?month=${month}&s_query=${s_query}&limit=${limit}&offset=${offset}`
+    `https://roxilersystems-assignment.onrender.com/transactions?month=${month}&s_query=${s_query}&limit=${limit}&offset=${offset}`
   );
   const listTransactionsResponseData = await listTransactionsResponse.data;
   const statisticsResponse = await axios.get(
-    `https://roxiler-systems-assignment-lw5d.onrender.com/statistics?month=${month}`
+    `https://roxilersystems-assignment.onrender.com/statistics?month=${month}`
   );
   const statisticsResponseData = await statisticsResponse.data;
   const barChartResponse = await axios.get(
-    `https://roxiler-systems-assignment-lw5d.onrender.com/bar-chart?month=${month}`
+    `https://roxilersystems-assignment.onrender.com/bar-chart?month=${month}`
   );
   const barChartResponseData = await barChartResponse.data;
   const pieChartResponse = await axios.get(
-    `https://roxiler-systems-assignment-lw5d.onrender.com/pie-chart?month=${month}`
+    `https://roxilersystems-assignment.onrender.com/pie-chart?month=${month}`
   );
   const pieChartResponseData = await pieChartResponse.data;
 
